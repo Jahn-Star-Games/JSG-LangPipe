@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PromptTemplateExample : MonoBehaviour
 {
-    public string template = "What is the {part} of {country}?";
-    public List<FormatPromptValue> format = new();
+    public string template = "What is the capital of {country}?";
+    public List<FormatPromptValue> format = new() { new() { key = "country", value = "{Turkey}" } };
     [Space, TextArea(5, 10)]
     public string result;
     private void Start()
